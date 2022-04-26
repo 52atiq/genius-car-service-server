@@ -11,7 +11,7 @@ app.listen(port, () =>{
 })
 //middleware
 app.use(cors());
-app.use(express.json()); // for use it to get parse bodies data/ to get json data from client side
+app.use(express.json()); // for use it to get parse body data/ to get json data from Cliient side
 
 function verifyJWT(req, res, next){
     const authHeader = req.headers.authorization;
@@ -93,7 +93,7 @@ async function run(){
         res.send(orders);
        }
        else{
-           res.status(403).send({message: 'forbidden access'})
+           res.status(403).send({message: 'forbidden access'});
        }
     })
 
