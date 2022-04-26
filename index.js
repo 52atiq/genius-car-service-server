@@ -86,6 +86,7 @@ async function run(){
     app.get('/order', verifyJWT, async (req, res) =>{
         const decodedEmail = req.decoded.email;
         const email = req.query.email;
+        console.log(email);
        if( email === decodedEmail){
         const query = {email: email};
         const cursor = orderCollection.find(query);
